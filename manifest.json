@@ -1,0 +1,40 @@
+{
+    "name": "MangaHack",
+    "description": "100 pontos hoje?",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "webRequest"
+    ],
+    "action": {
+        "default_icon": {
+            "16": "/images/logo.png",
+            "32": "/images/logo.png",
+            "48": "/images/logo.png",
+            "128": "/images/logo.png"
+        }
+    },
+    "icons": {
+        "16": "/images/logo.png",
+        "32": "/images/logo.png",
+        "48": "/images/logo.png",
+        "128": "/images/logo.png"
+    },
+    "host_permissions": [
+        "https://platform.mangahigh.com/pt-br/home",
+        "https://campus.mangahigh.com/pt-br/*",
+        "https://campus.mangahigh.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://platform.mangahigh.com/pt-br/home",
+                "https://campus.mangahigh.com/pt-br/*",
+                "https://campus.mangahigh.com/*"
+            ],
+            "js": ["manga.js"]
+        }
+    ]
+}
